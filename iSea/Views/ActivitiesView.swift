@@ -16,12 +16,13 @@ struct ActivitiesView: View {
             NavigationStack {
                 HStack {
                     Text("Activities").font(.largeTitle).bold()
-                    Spacer()
+                        Spacer()
+                        .frame(width: 180)
                     
                     NavigationLink(destination: UserImpactView()){
-                        Image(systemName: "chart.bar.fill")
-                            .font(.subheadline)
-                            .foregroundColor(.black)
+                            Image(systemName: "chart.bar.fill")
+                                .font(.subheadline)
+                                .foregroundColor(.black)
                     }
                 }
                 
