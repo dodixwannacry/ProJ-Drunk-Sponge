@@ -14,8 +14,17 @@ struct ActivitiesView: View {
     
     var body: some View {
             NavigationStack {
-                Text("Activities").font(.largeTitle).bold()
-                    .searchable(text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=$text@*/.constant("")/*@END_MENU_TOKEN@*/, placement: .automatic)
+                HStack {
+                    Text("Activities").font(.largeTitle).bold()
+                    Spacer()
+                    
+                    NavigationLink(destination: UserImpactView()){
+                        Image(systemName: "chart.bar.fill")
+                            .font(.subheadline)
+                            .foregroundColor(.black)
+                    }
+                }
+                
                 ScrollView() {
                     VStack() {
                         ForEach(viewModel.activity) { activity in
