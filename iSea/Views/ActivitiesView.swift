@@ -42,6 +42,7 @@ struct ActivitiesView: View {
         }
     }
 }
+//FEDORA NAèASD
 
 
 #Preview {
