@@ -10,8 +10,10 @@ import SwiftUI
         @State var isPresented = false
         var body: some View {
             NavigationStack {
+                
                 Text("Activities").font(.largeTitle).bold()
                     .frame(width: 200,height:100)
+                Spacer()
                 VStack{
                     Button(action: {
                         self.isPresented.toggle()
