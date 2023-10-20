@@ -13,27 +13,24 @@ import SwiftUI
                 
                 Text("Activities").font(.largeTitle).bold()
                     .frame(width: 200,height:100)
-                Spacer()
-                VStack{
-                    Button(action: {
-                        self.isPresented.toggle()
-                        
-                    }, label: {
-                        Text("Edit")
-                            .bold()
-                            .foregroundColor(.black)
-                            .frame(width:200,height:50)
-                            .background(Color.gray)
-                    })
-                    .fullScreenCover(isPresented: $isPresented, content: {
-                        OverlayView(isPresented: $isPresented)
+                Button(action: {
+                    self.isPresented.toggle()
                     
-                    })
-                    Text("Your Savings")
-                        .foregroundColor(Color.green)
+                }, label: {
+                    Image(systemName:"plus")
                         .bold()
+                        .foregroundColor(.black)
+                        .frame(width:25,height:25)
+                })
+                .fullScreenCover(isPresented: $isPresented, content: {
+                    OverlayView(isPresented: $isPresented)
                 
-                }
+                })
+                Text("Your Savings")
+                    .foregroundColor(Color.green)
+                    .bold()
+                Spacer()
+
             }
         }
     }
