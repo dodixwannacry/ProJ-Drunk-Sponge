@@ -42,7 +42,6 @@ struct ActivitiesView: View {
         }
     }
 }
-//FEDORA NAèASDHVHV
 
 
 #Preview {
