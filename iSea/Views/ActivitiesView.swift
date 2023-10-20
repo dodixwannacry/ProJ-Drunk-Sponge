@@ -42,7 +42,7 @@ struct ActivitiesView: View {
         }
     }
 }
-//FEDORA NAèASD
+//FEDORA NAèASDHVHV
 
 
 #Preview {
