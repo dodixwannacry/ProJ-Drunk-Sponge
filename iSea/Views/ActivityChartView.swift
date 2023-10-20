@@ -27,7 +27,9 @@ import SwiftUI
                         OverlayView(isPresented: $isPresented)
                     
                     })
-                    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                    Text("Your Savings")
+                        .foregroundColor(Color.green)
+                        .bold()
                 
                 }
             }
