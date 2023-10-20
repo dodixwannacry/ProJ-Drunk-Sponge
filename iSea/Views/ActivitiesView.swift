@@ -15,6 +15,7 @@ struct ActivitiesView: View {
     var body: some View {
             NavigationStack {
                 Text("Activities").font(.largeTitle).bold()
+                    .searchable(text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=$text@*/.constant("")/*@END_MENU_TOKEN@*/, placement: .automatic)
                 ScrollView() {
                     VStack() {
                         ForEach(viewModel.activity) { activity in
@@ -24,6 +25,7 @@ struct ActivitiesView: View {
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(height: 200)
+                                        .grayscale(1)
                                     Rectangle().fill(LinearGradient(colors: [.clear, .black.opacity(0.6)], startPoint: .top, endPoint: .bottom))
                                     VStack(alignment: .leading) {
                                         Text(activity.name).font(.title).bold()
@@ -42,7 +44,6 @@ struct ActivitiesView: View {
         }
     }
 }
-
 
 #Preview {
     ActivitiesView()
