@@ -10,9 +10,9 @@ import Foundation
 
 class ActivitiesViewModel {
     var activity = [
-        Activities(name: "Doing laundry", imageName: "Laundry"),
-        Activities(name: "Showering", imageName: "Showering"),
-        Activities(name: "Doing dishes", imageName: "Washing dishes"),
-        Activities(name: "Cleaning", imageName: "anton-SnKfmC1I9fU-unsplash")
+        Activities(name: "Doing laundry", imageName: "Laundry",WPI: 0.36),
+        Activities(name: "Showering", imageName: "Showering",WPI: 0.8),
+        Activities(name: "Doing dishes", imageName: "Washing dishes",WPI: 0.05),
+        Activities(name: "Cleaning", imageName: "anton-SnKfmC1I9fU-unsplash",WPI: 0.36),
     ]
 }
