@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D7AE3562AE7BFA9009FFF4A /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7AE3552AE7BFA9009FFF4A /* ModalView.swift */; };
 		F375BD402AE285B60044F13A /* UserImpactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD3F2AE285B60044F13A /* UserImpactView.swift */; };
 		F375BD422AE7AD0A0044F13A /* ConsequencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD412AE7AD0A0044F13A /* ConsequencesView.swift */; };
 		F3C68A0B2AE11D8900241897 /* iSeaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C68A0A2AE11D8900241897 /* iSeaApp.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D7AE3552AE7BFA9009FFF4A /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		F375BD3F2AE285B60044F13A /* UserImpactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImpactView.swift; sourceTree = "<group>"; };
 		F375BD412AE7AD0A0044F13A /* ConsequencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsequencesView.swift; sourceTree = "<group>"; };
 		F3C68A072AE11D8900241897 /* iSea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSea.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				F375BD3F2AE285B60044F13A /* UserImpactView.swift */,
 				F3C68A422AE1C54300241897 /* ActivityChartView.swift */,
 				F375BD412AE7AD0A0044F13A /* ConsequencesView.swift */,
+				4D7AE3552AE7BFA9009FFF4A /* ModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			files = (
 				F3C68A352AE11EFC00241897 /* ActivitiesModel.swift in Sources */,
 				F375BD422AE7AD0A0044F13A /* ConsequencesView.swift in Sources */,
+				4D7AE3562AE7BFA9009FFF4A /* ModalView.swift in Sources */,
 				F375BD402AE285B60044F13A /* UserImpactView.swift in Sources */,
 				F3C68A3A2AE1271100241897 /* ActivitiesViewModel.swift in Sources */,
 				F3C68A3F2AE1BA3300241897 /* ActivitiesView.swift in Sources */,
