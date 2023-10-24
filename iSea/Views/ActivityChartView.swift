@@ -42,45 +42,47 @@ struct ActivityChartView: View {
                     Spacer().frame(width: 240)
                     Text("\(modifiedDate)")
                 }
-                
+                Button {
+                                               ViewButton = true
+                                           } label: {
+                                               Image(systemName: "plus")
+                                                   .background(.teal)
+                                                   .bold()
+                                                   .foregroundColor(.black)
+                                                   .cornerRadius(8)
+                                                   .frame(width: 150, height: 370)
+                                           }
+                                           .sheet(isPresented: $ViewButton) {
+                                               ModalView()
+                                           }
+                                           .toolbar{
+                                               ToolbarItem(placement: .navigationBarTrailing)
+                                               {
+                                                   Button
+                                                   {
+                                                       presentationMode.wrappedValue.dismiss()
+                                                       
+                                                   } label:
+                                                   {
+                                                   }
+                                               }
+                                               
+                                               ToolbarItem(placement: .navigationBarLeading)
+                                               {
+                                                   Button
+                                                   {
+                                                       
+                                                       presentationMode.wrappedValue.dismiss()
+                                                   } label:
+                                                   {
+                                                   }
+                                               }
+                                               
+                                           }
+                       }
                
             }
-            Button {
-                                           ViewButton = true
-                                       } label: {
-                                           Image(systemName: "plus")
-                                               .background(.teal)
-                                               .bold()
-                                               .foregroundColor(.black)
-                                       }
-                                       .sheet(isPresented: $ViewButton) {
-                                           ModalView()
-                                       }
-                                       .toolbar{
-                                           ToolbarItem(placement: .navigationBarTrailing)
-                                           {
-                                               Button
-                                               {
-                                                   presentationMode.wrappedValue.dismiss()
-                                                   
-                                               } label:
-                                               {
-                                               }
-                                           }
-                                           
-                                           ToolbarItem(placement: .navigationBarLeading)
-                                           {
-                                               Button
-                                               {
-                                                   
-                                                   presentationMode.wrappedValue.dismiss()
-                                               } label:
-                                               {
-                                               }
-                                           }
-                                           
-                                       }
-                   }
+            
 
             }
         }
