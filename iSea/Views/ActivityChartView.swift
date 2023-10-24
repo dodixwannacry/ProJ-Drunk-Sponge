@@ -6,31 +6,47 @@
 //
 
 import SwiftUI
+import Foundation
 struct ActivityChartView: View {
+    
+    
     @State var isPresented = false
     var body: some View {
+        let date = Date()
+        let modifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: date)!
         NavigationStack {
-            Text("Activities").font(.largeTitle).bold()
-                .frame(width: 200,height:100)
-            
-            ZStack(alignment: .topLeading) {
-                Image("cristian-palmer-XexawgzYOBc-unsplash")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 180)
-                
-                
-                Rectangle().fill(LinearGradient(colors: [.clear, .black.opacity(0.3)], startPoint: .top, endPoint: .bottom))
-                    .frame(height: 200)
-                VStack(alignment: .leading) {
-                    Text("The consequences on sea pollution").font(.title).bold()
+            VStack {
+                NavigationLink(destination: ConsequencesView()){
+                    ZStack(alignment: .topLeading) {
+                        Image("cristian-palmer-XexawgzYOBc-unsplash")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 180)
+                        
+                        
+                        Rectangle().fill(LinearGradient(colors: [.clear, .black.opacity(0.3)], startPoint: .top, endPoint: .bottom))
+                            .frame(height: 200)
+                        VStack(alignment: .leading) {
+                            Text("The consequences on sea pollution").font(.largeTitle).bold().padding()
+                        }
+                        
+                        .foregroundStyle(Color.white)
+                        .padding()
+                    }
+                    .cornerRadius(20)
+                    .padding(.top)
+                    .padding(.horizontal)
                 }
-                    
-                .foregroundStyle(Color.white)
-                .padding()
+                HStack {
+                    Text("Today")
+                    Spacer().frame(width: 240)
+                    Text("\(modifiedDate)")
+                }
+               
             }
-            .cornerRadius(15)
-            .padding(.horizontal)
+            
+
+            
             
             Button(action: {
                 self.isPresented.toggle()
@@ -52,6 +68,7 @@ struct ActivityChartView: View {
             
         }
     }
+        
 }
 
 
