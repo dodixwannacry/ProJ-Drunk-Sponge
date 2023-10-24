@@ -13,9 +13,12 @@ struct ActivityChartView: View {
     
     @State private var ViewButton = false
     @Environment(\.presentationMode) var presentationMode
+    let dateFormatter: DateFormatter = {
+           let formatter = DateFormatter()
+           formatter.dateFormat = "dd/MM/yyyy"
+           return formatter
+       }()
     var body: some View {
-        let date = Date()
-        let modifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: date)!
         NavigationStack {
             VStack {
                 NavigationLink(destination: ConsequencesView()){
@@ -41,18 +44,21 @@ struct ActivityChartView: View {
                 }
                 HStack {
                     Text("Today")
+                        .bold()
                     Spacer().frame(width: 240)
-                    Text("\(modifiedDate)")
+                    Text(" \(dateFormatter.string(from: Date()))")
+                        .bold()
                 }
                 Button {
                     ViewButton = true
                 } label: {
                     Image(systemName: "plus")
+                        .alignmentGuide(.leading) { _ in -150 }
                         .background(.teal)
                         .bold()
                         .foregroundColor(.black)
                         .cornerRadius(8)
-                        .frame(width: 150, height: 370)
+                        .frame(width: 150, height: 350)
                 }
                 .sheet(isPresented: $ViewButton) {
                     ModalView()
