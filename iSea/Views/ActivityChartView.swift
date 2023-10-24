@@ -7,7 +7,9 @@
 
 import SwiftUI
 import Foundation
+
 struct ActivityChartView: View {
+    
     
     @State private var ViewButton = false
     @Environment(\.presentationMode) var presentationMode
@@ -43,53 +45,53 @@ struct ActivityChartView: View {
                     Text("\(modifiedDate)")
                 }
                 Button {
-                                               ViewButton = true
-                                           } label: {
-                                               Image(systemName: "plus")
-                                                   .background(.teal)
-                                                   .bold()
-                                                   .foregroundColor(.black)
-                                                   .cornerRadius(8)
-                                                   .frame(width: 150, height: 370)
-                                           }
-                                           .sheet(isPresented: $ViewButton) {
-                                               ModalView()
-                                           }
-                                           .toolbar{
-                                               ToolbarItem(placement: .navigationBarTrailing)
-                                               {
-                                                   Button
-                                                   {
-                                                       presentationMode.wrappedValue.dismiss()
-                                                       
-                                                   } label:
-                                                   {
-                                                   }
-                                               }
-                                               
-                                               ToolbarItem(placement: .navigationBarLeading)
-                                               {
-                                                   Button
-                                                   {
-                                                       
-                                                       presentationMode.wrappedValue.dismiss()
-                                                   } label:
-                                                   {
-                                                   }
-                                               }
-                                               
-                                           }
-                       }
-               
+                    ViewButton = true
+                } label: {
+                    Image(systemName: "plus")
+                        .background(.teal)
+                        .bold()
+                        .foregroundColor(.black)
+                        .cornerRadius(8)
+                        .frame(width: 150, height: 370)
+                }
+                .sheet(isPresented: $ViewButton) {
+                    ModalView()
+                }
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing)
+                    {
+                        Button
+                        {
+                            presentationMode.wrappedValue.dismiss()
+                            
+                        } label:
+                        {
+                        }
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarLeading)
+                    {
+                        Button
+                        {
+                            
+                            presentationMode.wrappedValue.dismiss()
+                        } label:
+                        {
+                        }
+                    }
+                    
+                }
             }
             
-
-            }
         }
-
-
-    #Preview {
-        ActivityChartView()
+        
+        
     }
-    
+}
+
+
+#Preview {
+    ActivityChartView()
+}
+
 

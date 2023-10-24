@@ -10,6 +10,7 @@
 		4D7AE3562AE7BFA9009FFF4A /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7AE3552AE7BFA9009FFF4A /* ModalView.swift */; };
 		F375BD402AE285B60044F13A /* UserImpactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD3F2AE285B60044F13A /* UserImpactView.swift */; };
 		F375BD422AE7AD0A0044F13A /* ConsequencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD412AE7AD0A0044F13A /* ConsequencesView.swift */; };
+		F375BD452AE7CE920044F13A /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F375BD432AE7CE920044F13A /* Database.xcdatamodeld */; };
 		F3C68A0B2AE11D8900241897 /* iSeaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C68A0A2AE11D8900241897 /* iSeaApp.swift */; };
 		F3C68A0F2AE11D8B00241897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C68A0E2AE11D8B00241897 /* Assets.xcassets */; };
 		F3C68A122AE11D8B00241897 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C68A112AE11D8B00241897 /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		4D7AE3552AE7BFA9009FFF4A /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		F375BD3F2AE285B60044F13A /* UserImpactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImpactView.swift; sourceTree = "<group>"; };
 		F375BD412AE7AD0A0044F13A /* ConsequencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsequencesView.swift; sourceTree = "<group>"; };
+		F375BD442AE7CE920044F13A /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		F3C68A072AE11D8900241897 /* iSea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C68A0A2AE11D8900241897 /* iSeaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSeaApp.swift; sourceTree = "<group>"; };
 		F3C68A0E2AE11D8B00241897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		F3C689FE2AE11D8900241897 = {
 			isa = PBXGroup;
 			children = (
+				F375BD432AE7CE920044F13A /* Database.xcdatamodeld */,
 				F3C68A092AE11D8900241897 /* iSea */,
 				F3C68A1A2AE11D8B00241897 /* iSeaTests */,
 				F3C68A242AE11D8B00241897 /* iSeaUITests */,
@@ -295,6 +298,7 @@
 				F375BD422AE7AD0A0044F13A /* ConsequencesView.swift in Sources */,
 				4D7AE3562AE7BFA9009FFF4A /* ModalView.swift in Sources */,
 				F375BD402AE285B60044F13A /* UserImpactView.swift in Sources */,
+				F375BD452AE7CE920044F13A /* Database.xcdatamodeld in Sources */,
 				F3C68A3A2AE1271100241897 /* ActivitiesViewModel.swift in Sources */,
 				F3C68A3F2AE1BA3300241897 /* ActivitiesView.swift in Sources */,
 				F3C68A432AE1C54300241897 /* ActivityChartView.swift in Sources */,
@@ -628,6 +632,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F375BD432AE7CE920044F13A /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F375BD442AE7CE920044F13A /* Database.xcdatamodel */,
+			);
+			currentVersion = F375BD442AE7CE920044F13A /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F3C689FF2AE11D8900241897 /* Project object */;
 }

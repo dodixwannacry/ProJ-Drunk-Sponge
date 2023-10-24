@@ -29,7 +29,7 @@ struct ActivitiesView: View {
                 ScrollView() {
                     VStack() {
                         ForEach(viewModel.activity) { activity in
-                            NavigationLink(destination: ActivityChartView().navigationBarTitle("Activities")) {
+                            NavigationLink(destination: ActivityChartView().navigationBarTitle(activity.name)) {
                                 ZStack(alignment: .bottomLeading) {
                                     Image(activity.imageName)
                                         .resizable()
