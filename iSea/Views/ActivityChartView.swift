@@ -11,13 +11,14 @@ import Foundation
 struct ActivityChartView: View {
     
     
-    @State private var ViewButton = false
+    @State private var viewButton = false
     @Environment(\.presentationMode) var presentationMode
+    
     let dateFormatter: DateFormatter = {
-           let formatter = DateFormatter()
-           formatter.dateFormat = "dd/MM/yyyy"
-           return formatter
-       }()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter
+    }()
     var body: some View {
         NavigationStack {
             VStack {
@@ -26,11 +27,12 @@ struct ActivityChartView: View {
                         Image("cristian-palmer-XexawgzYOBc-unsplash")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(height: 180)
+                            .frame(height: 170)
                         
                         
                         Rectangle().fill(LinearGradient(colors: [.clear, .black.opacity(0.3)], startPoint: .top, endPoint: .bottom))
                             .frame(height: 200)
+                        
                         VStack(alignment: .leading) {
                             Text("The consequences on sea pollution").font(.largeTitle).bold().padding()
                         }
@@ -45,23 +47,33 @@ struct ActivityChartView: View {
                 HStack {
                     Text("Today")
                         .bold()
-                    Spacer().frame(width: 240)
+                        .padding()
+                    Spacer().frame(width: 200)
                     Text(" \(dateFormatter.string(from: Date()))")
                         .bold()
                 }
-                Button {
-                    ViewButton = true
-                } label: {
-                    Image(systemName: "plus")
-                        .alignmentGuide(.leading) { _ in -150 }
-                        .background(.teal)
-                        .bold()
-                        .foregroundColor(.black)
-                        .cornerRadius(8)
-                        .frame(width: 150, height: 350)
+                HStack {
+                    Button {
+                        viewButton = true
+                    } label: {
+                        Image(systemName: "plus")
+                            .resizable()
+                            .frame(width: 16, height: 16)
+                            .padding(.all, 8)
+                            .background(.teal)
+                            .bold()
+                            .foregroundColor(.white)
+                            .cornerRadius(22)
+                    }
+                    Spacer()
+                        .frame(width: 200)
+                    Text("numero").bold().font(.largeTitle)
+                        
                 }
-                .sheet(isPresented: $ViewButton) {
-                    ModalView()
+                Spacer()
+                
+                .sheet(isPresented: $viewButton) {
+                    InputModalView()
                 }
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing)
