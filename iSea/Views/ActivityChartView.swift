@@ -66,17 +66,15 @@ struct ActivityChartView: View {
                             .bold()
                             .foregroundColor(.white)
                             .cornerRadius(22)
-                            
+                            .multilineTextAlignment(.leading)
                     }
                     Spacer()
-                        .frame(width: 200)
+                        .frame(width: 20)
                     VStack(alignment: .center ,content: {
-                        Text("numero")
-                            .bold()
+                        Text("0.00 Kg")
                             .font(.largeTitle)
                             .foregroundColor(Color.teal)
                     })
-                        
                 }
                 Spacer()
                 
