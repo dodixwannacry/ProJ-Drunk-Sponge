@@ -38,6 +38,7 @@ struct ConsequencesView: View {
                 .cornerRadius(18)
                 .padding(.top)
                 .padding(.horizontal)
+                Spacer()
             }
         }
     }
