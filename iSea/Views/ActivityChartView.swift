@@ -66,7 +66,7 @@ struct ActivityChartView: View {
                             .cornerRadius(22)
                     }
                     Spacer()
-                        .frame(width: 200)
+                        .frame(width: 180)
                     Text("numero").bold().font(.largeTitle)
                         
                 }
