@@ -103,6 +103,7 @@ struct InputModalView: View {
                             .cornerRadius(40)
                     })
                     .padding()
+                    .frame(width: 150)
                            Button(action: {save.toggle()}, label: {
                                Text("Save").font(.title)
                                    .bold()
