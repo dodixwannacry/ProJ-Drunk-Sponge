@@ -1,13 +1,13 @@
 //
-//  ModalView.swift
+//  InputShowerView.swift
 //  iSea
 //
-//  Created by Rodolfo Falanga on 24/10/23.
-//
+//  Created by Ilaria Poziello on 26/10/23.
+
 
 import SwiftUI
 
-struct InputModalView: View {
+struct InputShowerView: View {
     
     @State var selected1: Bool = false
     @State var selected2: Bool = false
@@ -20,13 +20,13 @@ struct InputModalView: View {
     
     var body: some View {
         NavigationStack {
-            Text("How many loads of laundry have you done today?").bold().font(.largeTitle).multilineTextAlignment(.center)
+            Text("How long did your last shower last?").bold().font(.largeTitle).multilineTextAlignment(.center)
                 .padding()
             
             VStack {
                 HStack {
                     Button(action: {selected1.toggle()}, label: {
-                        Text("1").font(.title)
+                        Text("5 min").font(.title)
                             .bold()
                             .foregroundColor(.black)
                             .frame(width: 140, height: 70)
@@ -37,7 +37,7 @@ struct InputModalView: View {
                     .padding()
                     .frame(width: 150, height: 100)
                            Button(action: {selected2.toggle()}, label: {
-                               Text("2").font(.title)
+                               Text("10 min").font(.title)
                                    .bold()
                                    .foregroundColor(.black)
                                    .frame(width: 140, height: 70)
@@ -48,7 +48,7 @@ struct InputModalView: View {
                 }
                 HStack {
                     Button(action: {selected3.toggle()}, label: {
-                        Text("3").font(.title)
+                        Text("15 min").font(.title)
                             .bold()
                             .foregroundColor(.black)
                             .frame(width: 140, height: 70)
@@ -59,7 +59,7 @@ struct InputModalView: View {
                     .padding()
                     .frame(width: 150, height: 100)
                            Button(action: {selected4.toggle()}, label: {
-                               Text("4").font(.title)
+                               Text("20 min").font(.title)
                                    .bold()
                                    .foregroundColor(.black)
                                    .frame(width: 140, height: 70)
@@ -70,7 +70,7 @@ struct InputModalView: View {
                 }
                 HStack {
                     Button(action: {selected5.toggle()}, label: {
-                        Text("5").font(.title)
+                        Text("25 min").font(.title)
                             .bold()
                             .foregroundColor(.black)
                             .frame(width: 140, height: 70)
@@ -81,7 +81,7 @@ struct InputModalView: View {
                     .padding()
                     .frame(width: 150, height:100)
                            Button(action: {selected6.toggle()}, label: {
-                               Text("6").font(.title)
+                               Text("30 min").font(.title)
                                    .bold()
                                    .foregroundColor(.black)
                                    .frame(width: 140, height: 70)
@@ -124,5 +124,5 @@ struct InputModalView: View {
  }
 
 #Preview {
-    InputModalView()
+    InputShowerView()
 }

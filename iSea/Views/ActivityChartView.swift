@@ -79,7 +79,7 @@ struct ActivityChartView: View {
                 Spacer()
                 
                 .sheet(isPresented: $viewButton) {
-                    InputModalView()
+                    InputLaundryView()
                 }
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing)
