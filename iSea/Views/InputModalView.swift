@@ -99,7 +99,7 @@ struct InputModalView: View {
                             .foregroundColor(.black)
                             .frame(width: 111, height: 61)
                             .padding(.all, 8)
-                            .background(.teal)
+                            .background(.gray)
                             .cornerRadius(40)
                     })
                     .padding()
@@ -110,7 +110,7 @@ struct InputModalView: View {
                                    .foregroundColor(.black)
                                    .frame(width: 111, height: 61)
                                    .padding(.all, 8)
-                                   .background(.teal)
+                                   .background(.gray)
                                    .cornerRadius(40)
                            })
                 }
