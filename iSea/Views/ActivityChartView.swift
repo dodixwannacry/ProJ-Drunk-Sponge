@@ -46,11 +46,13 @@ struct ActivityChartView: View {
                 }
                 HStack {
                     Text("Today")
+                        .foregroundColor(Color.gray)
                         .bold()
                         .padding()
-                    Spacer().frame(width: 200)
+                    Spacer().frame(width: 210)
                     Text(" \(dateFormatter.string(from: Date()))")
                         .bold()
+                        .foregroundColor(Color.gray)
                 }
                 HStack {
                     Button {
@@ -58,16 +60,22 @@ struct ActivityChartView: View {
                     } label: {
                         Image(systemName: "plus")
                             .resizable()
-                            .frame(width: 16, height: 16)
+                            .frame(width: 10, height: 10)
                             .padding(.all, 8)
                             .background(.teal)
                             .bold()
                             .foregroundColor(.white)
                             .cornerRadius(22)
+                            
                     }
                     Spacer()
                         .frame(width: 200)
-                    Text("numero").bold().font(.largeTitle)
+                    VStack(alignment: .center ,content: {
+                        Text("numero")
+                            .bold()
+                            .font(.largeTitle)
+                            .foregroundColor(Color.teal)
+                    })
                         
                 }
                 Spacer()
