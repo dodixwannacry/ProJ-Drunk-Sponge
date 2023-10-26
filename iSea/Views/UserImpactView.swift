@@ -14,14 +14,21 @@ struct UserImpactView: View {
                 Text("Your Impact")
                     .font(.largeTitle)
                     .bold()
-                Text("Amount of Pollution")
-                    .bold()
-                   Spacer()
-                
             }
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("Amount of Pollution")
+                        .font(.system(size: 24))
+                        .bold()
+                        Spacer()
+                        Text("This is your weekly impact")
+                        Spacer()
+                       }
+                }
+            }
+            
         }
     }
-}
 #Preview {
     UserImpactView()
 }

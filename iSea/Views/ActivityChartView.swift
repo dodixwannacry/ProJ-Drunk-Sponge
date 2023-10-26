@@ -54,27 +54,30 @@ struct ActivityChartView: View {
                         .bold()
                         .foregroundColor(Color.gray)
                 }
-                HStack {
-                    Button {
-                        viewButton = true
-                    } label: {
-                        Image(systemName: "plus")
-                            .resizable()
-                            .frame(width: 10, height: 10)
-                            .padding(.all, 8)
-                            .background(.teal)
-                            .bold()
-                            .foregroundColor(.white)
-                            .cornerRadius(22)
-                            .multilineTextAlignment(.leading)
+                VStack(alignment: .leading) {
+                    HStack {
+                        Button {
+                            viewButton = true
+                        } label: {
+                            Image(systemName: "plus")
+                                .resizable()
+                                .frame(width: 10, height: 10)
+                                .padding(.all, 8)
+                                .background(.teal)
+                                .bold()
+                                .foregroundColor(.white)
+                                .cornerRadius(22)
+                                .multilineTextAlignment(.leading)
+
+                        }
+                        Spacer()
+                            .frame(width: 180)
+                        VStack(alignment: .center ,content: {
+                            Text("0.00 Kg")
+                                .font(.largeTitle)
+                                .foregroundColor(Color.teal)
+                        })
                     }
-                    Spacer()
-                        .frame(width: 20)
-                    VStack(alignment: .center ,content: {
-                        Text("0.00 Kg")
-                            .font(.largeTitle)
-                            .foregroundColor(Color.teal)
-                    })
                 }
                 Spacer()
                 
