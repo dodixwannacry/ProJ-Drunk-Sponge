@@ -61,22 +61,22 @@ struct ActivityChartView: View {
                             Image(systemName: "plus")
                                 .resizable()
                                 .frame(width: 15, height: 15)
-                                .padding(.all, 8)
+                                .padding(.all, 7)
                                 .background(.teal)
                                 .bold()
                                 .foregroundColor(.white)
                                 .cornerRadius(22)
                                 .padding()
-                                .frame(width: 60)
+                                .frame(width: 100)
                         }
                         Spacer()
                         HStack(alignment: .center ,content: {
                             Text("0.00 Kg")
-                                .font(.system(size: 55))
+                                .font(.system(size: 60))
                                 .font(.largeTitle)
                                 .foregroundColor(Color.teal)
                         })
-                        Spacer()
+                        Spacer(minLength: 10)
                     }
                 }
                 Spacer()
