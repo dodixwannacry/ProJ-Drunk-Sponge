@@ -9,10 +9,19 @@ import SwiftUI
 
 struct UserImpactView: View {
     var body: some View {
-        Text(" user chart progress")
+        NavigationStack {
+            VStack {
+                Text("Your Impact")
+                    .font(.largeTitle)
+                    .bold()
+                Text("Amount of Pollution")
+                    .bold()
+                   Spacer()
+                
+            }
+        }
     }
 }
-
 #Preview {
     UserImpactView()
 }
