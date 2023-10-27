@@ -20,9 +20,10 @@ struct ActivitiesView: View {
                         .frame(width: 180)
                     
                     NavigationLink(destination: UserImpactView()){
-                            Image(systemName: "chart.bar.fill")
+                        Image(systemName: "chart.bar.fill")
+                            .foregroundColor(Color.teal)
                                 .font(.subheadline)
-                                .foregroundColor(.black)
+                                
                     }
                 }
                 
