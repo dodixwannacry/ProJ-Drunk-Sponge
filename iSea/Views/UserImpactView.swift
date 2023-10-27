@@ -14,16 +14,32 @@ struct UserImpactView: View {
                 Text("Your Impact")
                     .font(.largeTitle)
                     .bold()
+                    .padding(.bottom, 10.0)
             }
             VStack(alignment: .leading) {
-                HStack {
+                VStack {
                     Text("Amount of Pollution")
-                        .font(.system(size: 24))
+                        .font(.system(size: 20))
+                        .multilineTextAlignment(.leading)
                         .bold()
-                        Spacer()
+                        .padding(.trailing, 200.0)
+                        
+                        
+                        
+                    HStack{
                         Text("This is your weekly impact")
+                            .font(.subheadline)
+                            .fontWeight(.regular)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .padding([.leading, .bottom, .trailing], 8.0)
+                        Spacer(minLength: 170)
+                            
+                    }
                         Spacer()
                        }
+
                 }
             }
             
