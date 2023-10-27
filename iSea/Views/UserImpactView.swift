@@ -45,7 +45,7 @@ struct UserImpactView: View {
                 Text("0.00 Kg")
                     .fontWeight(.semibold)
                     .foregroundColor(Color.teal)
-                    .font(.system(size: 55))
+                    .font(.system(size: 65))
                 Spacer(minLength: 50)
             }
             
@@ -70,7 +70,7 @@ struct UserImpactView: View {
                     Text("0.00 Kg")
                         .fontWeight(.semibold)
                         .foregroundColor(Color.gray)
-                        .font(.system(size: 55))
+                        .font(.system(size: 65))
                     Spacer(minLength: 15)
                 }
             }
