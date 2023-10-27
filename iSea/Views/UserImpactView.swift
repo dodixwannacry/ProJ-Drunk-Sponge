@@ -42,6 +42,9 @@ struct UserImpactView: View {
 
                 }
             }
+        VStack{
+            Text("This is your weekly impact")
+        }
             
         }
     }
