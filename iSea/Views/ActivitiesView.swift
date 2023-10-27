@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ActivitiesView: View {
     
-    var viewModel = ActivitiesViewModel()
+    @ObservedObject var viewModel = ActivitiesViewModel()
     
     var body: some View {
             NavigationStack {
@@ -30,7 +30,8 @@ struct ActivitiesView: View {
                 ScrollView() {
                     VStack() {
                         ForEach(viewModel.activity) { activity in
-                            NavigationLink(destination: ActivityChartView().navigationBarTitle(activity.name)) {
+                            
+                            NavigationLink(destination: ActivityChartView(viewModel: viewModel, activity: activity)) {
                                 ZStack(alignment: .bottomLeading) {
                                     Image(activity.imageName)
                                         .resizable()

@@ -8,8 +8,8 @@
 import Foundation
 
 
-class ActivitiesViewModel {
-    var activity = [
+class ActivitiesViewModel: ObservableObject {
+    @Published var activity : [Activities] = [
         Activities(name: "Doing laundry", imageName: "Laundry",WPI: 0.36),
         Activities(name: "Showering", imageName: "Showering",WPI: 0.8),
         Activities(name: "Doing dishes", imageName: "Washing dishes",WPI: 0.05),
