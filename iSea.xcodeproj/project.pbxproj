@@ -14,6 +14,7 @@
 		F375BD482AEA62380044F13A /* InputShowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD472AEA62380044F13A /* InputShowerView.swift */; };
 		F375BD4A2AEA62EE0044F13A /* InputDishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD492AEA62EE0044F13A /* InputDishesView.swift */; };
 		F375BD4C2AEA64FE0044F13A /* InputCleaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD4B2AEA64FE0044F13A /* InputCleaningView.swift */; };
+		F375BD4E2AEBAE510044F13A /* ConsequencesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD4D2AEBAE510044F13A /* ConsequencesArray.swift */; };
 		F3C68A0B2AE11D8900241897 /* iSeaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C68A0A2AE11D8900241897 /* iSeaApp.swift */; };
 		F3C68A0F2AE11D8B00241897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C68A0E2AE11D8B00241897 /* Assets.xcassets */; };
 		F3C68A122AE11D8B00241897 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C68A112AE11D8B00241897 /* Preview Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		F375BD472AEA62380044F13A /* InputShowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputShowerView.swift; sourceTree = "<group>"; };
 		F375BD492AEA62EE0044F13A /* InputDishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDishesView.swift; sourceTree = "<group>"; };
 		F375BD4B2AEA64FE0044F13A /* InputCleaningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCleaningView.swift; sourceTree = "<group>"; };
+		F375BD4D2AEBAE510044F13A /* ConsequencesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsequencesArray.swift; sourceTree = "<group>"; };
 		F3C68A072AE11D8900241897 /* iSea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C68A0A2AE11D8900241897 /* iSeaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSeaApp.swift; sourceTree = "<group>"; };
 		F3C68A0E2AE11D8B00241897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		F3C68A3B2AE1271B00241897 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F375BD4D2AEBAE510044F13A /* ConsequencesArray.swift */,
 				F3C68A342AE11EFC00241897 /* ActivitiesModel.swift */,
 				F3C68A392AE1271100241897 /* ActivitiesViewModel.swift */,
 			);
@@ -319,6 +322,7 @@
 				F375BD402AE285B60044F13A /* UserImpactView.swift in Sources */,
 				F375BD452AE7CE920044F13A /* Database.xcdatamodeld in Sources */,
 				F3C68A3A2AE1271100241897 /* ActivitiesViewModel.swift in Sources */,
+				F375BD4E2AEBAE510044F13A /* ConsequencesArray.swift in Sources */,
 				F3C68A3F2AE1BA3300241897 /* ActivitiesView.swift in Sources */,
 				F3C68A432AE1C54300241897 /* ActivityChartView.swift in Sources */,
 				F375BD4C2AEA64FE0044F13A /* InputCleaningView.swift in Sources */,
