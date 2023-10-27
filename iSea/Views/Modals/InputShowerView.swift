@@ -36,15 +36,15 @@ struct InputShowerView: View {
                     })
                     .padding()
                     .frame(width: 150, height: 100)
-                           Button(action: {selected2.toggle()}, label: {
-                               Text("10 min").font(.title)
-                                   .bold()
-                                   .foregroundColor(.black)
-                                   .frame(width: 140, height: 70)
-                                   .padding(.all, 8)
-                                   .background(selected2 ? .teal : .gray)
-                                   .cornerRadius(40)
-                           })
+                    Button(action: {selected2.toggle()}, label: {
+                        Text("10 min").font(.title)
+                            .bold()
+                            .foregroundColor(.black)
+                            .frame(width: 140, height: 70)
+                            .padding(.all, 8)
+                            .background(selected2 ? .teal : .gray)
+                            .cornerRadius(40)
+                    })
                 }
                 HStack {
                     Button(action: {selected3.toggle()}, label: {
@@ -58,15 +58,15 @@ struct InputShowerView: View {
                     })
                     .padding()
                     .frame(width: 150, height: 100)
-                           Button(action: {selected4.toggle()}, label: {
-                               Text("20 min").font(.title)
-                                   .bold()
-                                   .foregroundColor(.black)
-                                   .frame(width: 140, height: 70)
-                                   .padding(.all, 8)
-                                   .background(selected4 ? .teal : .gray)
-                                   .cornerRadius(40)
-                           })
+                    Button(action: {selected4.toggle()}, label: {
+                        Text("20 min").font(.title)
+                            .bold()
+                            .foregroundColor(.black)
+                            .frame(width: 140, height: 70)
+                            .padding(.all, 8)
+                            .background(selected4 ? .teal : .gray)
+                            .cornerRadius(40)
+                    })
                 }
                 HStack {
                     Button(action: {selected5.toggle()}, label: {
@@ -80,15 +80,15 @@ struct InputShowerView: View {
                     })
                     .padding()
                     .frame(width: 150, height:100)
-                           Button(action: {selected6.toggle()}, label: {
-                               Text("30 min").font(.title)
-                                   .bold()
-                                   .foregroundColor(.black)
-                                   .frame(width: 140, height: 70)
-                                   .padding(.all, 8)
-                                   .background(selected6 ? .teal : .gray)
-                                   .cornerRadius(40)
-                           })
+                    Button(action: {selected6.toggle()}, label: {
+                        Text("30 min").font(.title)
+                            .bold()
+                            .foregroundColor(.black)
+                            .frame(width: 140, height: 70)
+                            .padding(.all, 8)
+                            .background(selected6 ? .teal : .gray)
+                            .cornerRadius(40)
+                    })
                 }
                 Spacer()
                     .frame(height: 50)
@@ -104,24 +104,24 @@ struct InputShowerView: View {
                     })
                     .padding()
                     .frame(width: 150)
-                           Button(action: {save.toggle()}, label: {
-                               Text("Save").font(.title)
-                                   .bold()
-                                   .foregroundColor(.black)
-                                   .frame(width: 140, height: 55)
-                                   .padding(.all, 8)
-                                   .background(.teal)
-                                   .cornerRadius(40)
-                           })
+                    Button(action: {save.toggle()}, label: {
+                        Text("Save").font(.title)
+                            .bold()
+                            .foregroundColor(.black)
+                            .frame(width: 140, height: 55)
+                            .padding(.all, 8)
+                            .background(.teal)
+                            .cornerRadius(40)
+                    })
                 }
             }
             
             
             
-           
-           }
+            
+        }
     }
- }
+}
 
 #Preview {
     InputShowerView()

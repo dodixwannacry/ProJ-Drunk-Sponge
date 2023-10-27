@@ -21,19 +21,14 @@ struct ConsequencesView: View {
                         Image("consequences")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(height: 180)
+                            .frame(height: 170)
                         
                         
                         Rectangle().fill(LinearGradient(colors: [.clear, .black.opacity(0.3)], startPoint: .top, endPoint: .bottom))
-                            .frame(height: 185)
-                            .cornerRadius(29)
-                        VStack(alignment: .leading) {
-                            Text("The consequences on sea pollution").font(.largeTitle)
-                                .bold()
-                                .padding()
-                        }
-                        .foregroundStyle(Color.white)
-                        .padding()
+                            .frame(height: 175)
+                            .cornerRadius(3)
+                            .foregroundStyle(Color.white)
+                         
                     }
                     .cornerRadius(18)
                     .padding(.top)

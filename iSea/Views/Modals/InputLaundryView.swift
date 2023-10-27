@@ -18,6 +18,8 @@ struct InputLaundryView: View {
     @State var cancel: Bool = false
     @State var save: Bool = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationStack {
             Text("How many loads of laundry have you done today?").bold().font(.largeTitle).multilineTextAlignment(.center)
@@ -93,7 +95,11 @@ struct InputLaundryView: View {
                 Spacer()
                     .frame(height: 50)
                 HStack {
-                    Button(action: {cancel.toggle()}, label: {
+                    Button(action: {
+                        cancel.toggle()
+                        presentationMode.wrappedValue.dismiss()
+                        
+                    }, label: {
                         Text("Cancel").font(.title)
                             .bold()
                             .foregroundColor(.black)

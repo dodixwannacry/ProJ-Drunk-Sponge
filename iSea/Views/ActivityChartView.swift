@@ -33,9 +33,8 @@ struct ActivityChartView: View {
                         Rectangle().fill(LinearGradient(colors: [.clear, .black.opacity(0.3)], startPoint: .top, endPoint: .bottom))
                             .frame(height: 200)
                         
-                        VStack(alignment: .leading) {
                             Text("The consequences on sea pollution").font(.largeTitle).bold().padding()
-                        }
+                        
                         
                         .foregroundStyle(Color.white)
                         .padding()
@@ -45,14 +44,16 @@ struct ActivityChartView: View {
                     .padding(.horizontal)
                 }
                 HStack {
+                    Spacer().frame(width: 5)
                     Text("Today")
                         .foregroundColor(Color.gray)
                         .bold()
                         .padding()
-                    Spacer().frame(width: 210)
+                    Spacer()
                     Text(" \(dateFormatter.string(from: Date()))")
                         .bold()
                         .foregroundColor(Color.gray)
+                    Spacer().frame(width: 20)
                 }
                     HStack {
                         Button {
@@ -70,6 +71,7 @@ struct ActivityChartView: View {
                                 .frame(width: 100)
                         }
                         Spacer()
+                            .frame(width: 15)
                         HStack(alignment: .center ,content: {
                             Text("0.00 Kg")
                                 .font(.system(size: 60))
@@ -83,30 +85,6 @@ struct ActivityChartView: View {
                 
                 .sheet(isPresented: $viewButton) {
                     InputLaundryView()
-                }
-                .toolbar{
-                    ToolbarItem(placement: .navigationBarTrailing)
-                    {
-                        Button
-                        {
-                            presentationMode.wrappedValue.dismiss()
-                            
-                        } label:
-                        {
-                        }
-                    }
-                    
-                    ToolbarItem(placement: .navigationBarLeading)
-                    {
-                        Button
-                        {
-                            
-                            presentationMode.wrappedValue.dismiss()
-                        } label:
-                        {
-                        }
-                    }
-                    
                 }
             }
             
