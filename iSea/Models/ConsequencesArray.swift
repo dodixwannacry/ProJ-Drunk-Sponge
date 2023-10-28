@@ -8,7 +8,7 @@
 import Foundation
 
 class Consequences {
-    var randomStringArray: [String] = [
+    var randomConsequenceArray: [String] = [
         "Laundry may seem harmless, but every wash of synthetic fabrics releases countless microplastic fibers into the water. Over time, these infiltrate marine life, potentially impacting human health.But that's not the only concern. Laundry wastewater carries chemicals from detergents, fabric softeners, and stain removers, disrupting marine ecosystems by affecting aquatic life's reproduction and feeding patterns. This disruption also alters marine species' natural behavior, causing abnormal migration, reproductive issues, and population decline. Our oceans, the lifeblood of our planet, face a dire threat from something as simple as doing the laundry.",
         
         "Our personal care products, from shampoos to soaps, often contain chemicals and microplastics that, when washed off, find their way into our water systems, eventually leading to ocean pollution. The marine life pays the price, as they ingest these pollutants, creating potential threats to their health and the health of those who rely on the sea's resources. And let's not forget the energy we use to heat water for showers, a process that contributes to carbon emissions and, in turn, climate change. As the Earth warms, oceans are impacted, leading to issues like sea level rise and ocean acidification. It's crucial that we consider these factors in our daily routines and work towards more sustainable alternatives.",

@@ -39,7 +39,7 @@ struct ConsequencesView: View {
                     Spacer()
                     
                 }
-                Text(consequence.randomStringArray[Int.random(in: 0...3)])
+                Text(consequence.randomConsequenceArray[Int.random(in: 0...3)])
             
                 
                 .cornerRadius(5)

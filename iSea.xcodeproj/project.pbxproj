@@ -15,6 +15,10 @@
 		F375BD4A2AEA62EE0044F13A /* InputDishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD492AEA62EE0044F13A /* InputDishesView.swift */; };
 		F375BD4C2AEA64FE0044F13A /* InputCleaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD4B2AEA64FE0044F13A /* InputCleaningView.swift */; };
 		F375BD4E2AEBAE510044F13A /* ConsequencesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD4D2AEBAE510044F13A /* ConsequencesArray.swift */; };
+		F375BD522AED56FC0044F13A /* LaundryTipsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD512AED56FC0044F13A /* LaundryTipsArray.swift */; };
+		F375BD542AED58810044F13A /* ShowerTipsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD532AED58810044F13A /* ShowerTipsArray.swift */; };
+		F375BD562AED59EF0044F13A /* CleaningTipsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD552AED59EF0044F13A /* CleaningTipsArray.swift */; };
+		F375BD582AED59FC0044F13A /* DishesTipsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD572AED59FC0044F13A /* DishesTipsArray.swift */; };
 		F3C68A0B2AE11D8900241897 /* iSeaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C68A0A2AE11D8900241897 /* iSeaApp.swift */; };
 		F3C68A0F2AE11D8B00241897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C68A0E2AE11D8B00241897 /* Assets.xcassets */; };
 		F3C68A122AE11D8B00241897 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C68A112AE11D8B00241897 /* Preview Assets.xcassets */; };
@@ -53,6 +57,10 @@
 		F375BD492AEA62EE0044F13A /* InputDishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDishesView.swift; sourceTree = "<group>"; };
 		F375BD4B2AEA64FE0044F13A /* InputCleaningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCleaningView.swift; sourceTree = "<group>"; };
 		F375BD4D2AEBAE510044F13A /* ConsequencesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsequencesArray.swift; sourceTree = "<group>"; };
+		F375BD512AED56FC0044F13A /* LaundryTipsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryTipsArray.swift; sourceTree = "<group>"; };
+		F375BD532AED58810044F13A /* ShowerTipsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowerTipsArray.swift; sourceTree = "<group>"; };
+		F375BD552AED59EF0044F13A /* CleaningTipsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningTipsArray.swift; sourceTree = "<group>"; };
+		F375BD572AED59FC0044F13A /* DishesTipsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTipsArray.swift; sourceTree = "<group>"; };
 		F3C68A072AE11D8900241897 /* iSea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C68A0A2AE11D8900241897 /* iSeaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSeaApp.swift; sourceTree = "<group>"; };
 		F3C68A0E2AE11D8B00241897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +188,10 @@
 				F375BD4D2AEBAE510044F13A /* ConsequencesArray.swift */,
 				F3C68A342AE11EFC00241897 /* ActivitiesModel.swift */,
 				F3C68A392AE1271100241897 /* ActivitiesViewModel.swift */,
+				F375BD512AED56FC0044F13A /* LaundryTipsArray.swift */,
+				F375BD532AED58810044F13A /* ShowerTipsArray.swift */,
+				F375BD552AED59EF0044F13A /* CleaningTipsArray.swift */,
+				F375BD572AED59FC0044F13A /* DishesTipsArray.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,10 +327,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C68A352AE11EFC00241897 /* ActivitiesModel.swift in Sources */,
+				F375BD522AED56FC0044F13A /* LaundryTipsArray.swift in Sources */,
+				F375BD582AED59FC0044F13A /* DishesTipsArray.swift in Sources */,
+				F375BD562AED59EF0044F13A /* CleaningTipsArray.swift in Sources */,
 				F375BD422AE7AD0A0044F13A /* ConsequencesView.swift in Sources */,
 				F375BD4A2AEA62EE0044F13A /* InputDishesView.swift in Sources */,
 				4D7AE3562AE7BFA9009FFF4A /* InputLaundryView.swift in Sources */,
 				F375BD482AEA62380044F13A /* InputShowerView.swift in Sources */,
+				F375BD542AED58810044F13A /* ShowerTipsArray.swift in Sources */,
 				F375BD402AE285B60044F13A /* UserImpactView.swift in Sources */,
 				F375BD452AE7CE920044F13A /* Database.xcdatamodeld in Sources */,
 				F3C68A3A2AE1271100241897 /* ActivitiesViewModel.swift in Sources */,

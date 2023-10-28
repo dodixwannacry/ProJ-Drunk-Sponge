@@ -26,7 +26,6 @@ struct ActivityChartView: View {
         NavigationStack {
             VStack {
                 
-                
                 NavigationLink(destination: ConsequencesView()){
                     ZStack(alignment: .topLeading) {
                         Image("cristian-palmer-XexawgzYOBc-unsplash")
@@ -104,7 +103,6 @@ struct ActivityChartView: View {
         }
         .navigationTitle(activity.name)
         Spacer()
-        
     }
 }
 
@@ -115,8 +113,9 @@ struct ActivityChartView: View {
 struct ActivityChartViewPreview: PreviewProvider {
     
     static var previews: some View {
-        ActivityChartView(activity: Activities(name: "Doing laundry", imageName: "Laundry",WPI: 0.36))
+        ActivityChartView(activity: Activities(name: "Doing laundry", imageName: "Laundry", WPI: 0.36))
     }
 }
+
 
 
