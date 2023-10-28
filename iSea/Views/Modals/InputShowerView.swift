@@ -18,6 +18,8 @@ struct InputShowerView: View {
     @State var cancel: Bool = false
     @State var save: Bool = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationStack {
             Text("How long did your last shower last?").bold().font(.largeTitle).multilineTextAlignment(.center)
@@ -93,7 +95,10 @@ struct InputShowerView: View {
                 Spacer()
                     .frame(height: 50)
                 HStack {
-                    Button(action: {cancel.toggle()}, label: {
+                    Button(action: {
+                        cancel.toggle()
+                        presentationMode.wrappedValue.dismiss()},
+                        label: {
                         Text("Cancel").font(.title)
                             .bold()
                             .foregroundColor(.black)
