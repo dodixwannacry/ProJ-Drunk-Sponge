@@ -40,6 +40,9 @@ struct ConsequencesView: View {
                     
                 }
                 Text(consequence.randomConsequenceArray[Int.random(in: 0...3)])
+                    .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                    .padding()
+                    
             
                 
                 .cornerRadius(5)

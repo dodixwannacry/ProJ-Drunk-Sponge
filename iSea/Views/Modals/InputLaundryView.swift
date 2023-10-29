@@ -18,6 +18,14 @@ struct InputLaundryView: View {
     @State var cancel: Bool = false
     @State var save: Bool = false
     
+    @State var selectedButtonIndex: Int = 0
+    
+
+    
+   
+    
+    
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -27,68 +35,68 @@ struct InputLaundryView: View {
             
             VStack {
                 HStack {
-                    Button(action: {selected1.toggle()}, label: {
+                    Button(action: {selectedButtonIndex = 1}, label: {
                         Text("1").font(.title)
                             .bold()
                             .foregroundColor(.black)
                             .frame(width: 140, height: 70)
                             .padding(.all, 8)
-                            .background(selected1 ? .teal : .gray)
+                            .background(selectedButtonIndex == 1 ? .teal : .gray)
                             .cornerRadius(40)
                     })
                     .padding()
                     .frame(width: 150, height: 100)
-                           Button(action: {selected2.toggle()}, label: {
+                           Button(action: {selectedButtonIndex = 2}, label: {
                                Text("2").font(.title)
                                    .bold()
                                    .foregroundColor(.black)
                                    .frame(width: 140, height: 70)
                                    .padding(.all, 8)
-                                   .background(selected2 ? .teal : .gray)
+                                   .background(selectedButtonIndex == 2 ? .teal : .gray)
                                    .cornerRadius(40)
                            })
                 }
                 HStack {
-                    Button(action: {selected3.toggle()}, label: {
+                    Button(action: {selectedButtonIndex = 3}, label: {
                         Text("3").font(.title)
                             .bold()
                             .foregroundColor(.black)
                             .frame(width: 140, height: 70)
                             .padding(.all, 8)
-                            .background(selected3 ? .teal : .gray)
+                            .background(selectedButtonIndex == 3 ? .teal : .gray)
                             .cornerRadius(40)
                     })
                     .padding()
                     .frame(width: 150, height: 100)
-                           Button(action: {selected4.toggle()}, label: {
+                           Button(action: {selectedButtonIndex = 4}, label: {
                                Text("4").font(.title)
                                    .bold()
                                    .foregroundColor(.black)
                                    .frame(width: 140, height: 70)
                                    .padding(.all, 8)
-                                   .background(selected4 ? .teal : .gray)
+                                   .background(selectedButtonIndex == 4 ? .teal : .gray)
                                    .cornerRadius(40)
                            })
                 }
                 HStack {
-                    Button(action: {selected5.toggle()}, label: {
+                    Button(action: {selectedButtonIndex = 5}, label: {
                         Text("5").font(.title)
                             .bold()
                             .foregroundColor(.black)
                             .frame(width: 140, height: 70)
                             .padding(.all, 8)
-                            .background(selected5 ? .teal : .gray)
+                            .background(selectedButtonIndex == 5 ? .teal : .gray)
                             .cornerRadius(40)
                     })
                     .padding()
                     .frame(width: 150, height:100)
-                           Button(action: {selected6.toggle()}, label: {
+                           Button(action: {selectedButtonIndex = 6}, label: {
                                Text("6").font(.title)
                                    .bold()
                                    .foregroundColor(.black)
                                    .frame(width: 140, height: 70)
                                    .padding(.all, 8)
-                                   .background(selected6 ? .teal : .gray)
+                                   .background(selectedButtonIndex == 6 ? .teal : .gray)
                                    .cornerRadius(40)
                            })
                 }

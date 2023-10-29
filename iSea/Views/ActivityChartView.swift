@@ -83,7 +83,9 @@ struct ActivityChartView: View {
                             .foregroundColor(Color.teal)
                     })
                     Spacer(minLength: 10)
+                       
                 }
+                
                 .sheet(isPresented: $viewButton) {
                     switch (activity.name) {
                     case "Doing laundry":
@@ -97,12 +99,16 @@ struct ActivityChartView: View {
                     default:
                         EmptyView()
                     }
-                    
                 }
+                Spacer()
+                
             }
+            
+           
         }
         .navigationTitle(activity.name)
-        Spacer()
+        
+        
     }
 }
 
@@ -110,12 +116,10 @@ struct ActivityChartView: View {
 
 
 
-struct ActivityChartViewPreview: PreviewProvider {
-    
-    static var previews: some View {
-        ActivityChartView(activity: Activities(name: "Doing laundry", imageName: "Laundry", WPI: 0.36))
-    }
+#Preview {
+    ActivityChartView(activity: Activities(name: "Doing laundry", imageName: "Laundry",WPI: 0.36))
 }
+
 
 
 
