@@ -12,5 +12,5 @@ struct Activities: Identifiable {
     var id: UUID = UUID()
     var name: String
     var imageName: String
-    var WPI:Float
+    var WPI: Float
 }

@@ -89,13 +89,13 @@ struct ActivityChartView: View {
                 .sheet(isPresented: $viewButton) {
                     switch (activity.name) {
                     case "Doing laundry":
-                        InputLaundryView()
+                        InputView(inputViewModel: InputModel(question: "How many loads of laundry have you done today?", buttonValues: ["1","2","3","4","5","6"]))
                     case "Showering":
-                        InputShowerView()
+                        InputView(inputViewModel: InputModel(question: "How long did your last shower last?", buttonValues: ["5 min","10 min","15 min","20 min","25 min","30 min"]))
                     case "Doing dishes":
-                        InputDishesView()
+                        InputView(inputViewModel: InputModel(question: "How much time did you spend doing the dishes today?", buttonValues: ["5 min","10 min","15 min","20 min","25 min","30 min"]))
                     case "Cleaning":
-                        InputCleaningView()
+                        InputView(inputViewModel: InputModel(question: "How many sessions of cleaning have you done today?", buttonValues: ["1","2","3","4","5","6"]))
                     default:
                         EmptyView()
                     }
