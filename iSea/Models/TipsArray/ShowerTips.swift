@@ -8,7 +8,7 @@
 import Foundation
 
 class ShowerTips {
-    var randomShowerTips: [String] = [
+    static var randomTips: [String] = [
         
         "Consider shorter showers to save water and reduce pollutant release!",
         

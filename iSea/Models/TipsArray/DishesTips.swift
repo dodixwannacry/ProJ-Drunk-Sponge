@@ -8,7 +8,7 @@
 import Foundation
 
 class DishesTips {
-    var randomDishesTips: [String] = [
+   static var randomTips: [String] = [
         
         "Using eco-friendly detergents reduces harmful chemicals in wastewater!",
         

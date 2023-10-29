@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ConsequencesView: View {
     
-    let consequence = Consequences()
+    let consequence = CleaningConsequences() //ne ho messa una a caso giusto per far funzionare la preview e fare altro. Vedi come far fare in modo tale che in base alla pagina dell'attività in cui ti trovi, le conseguenze siano correlate a quell'attività
     
     var body: some View {
         NavigationStack {
@@ -39,7 +39,7 @@ struct ConsequencesView: View {
                     Spacer()
                     
                 }
-                Text(consequence.randomConsequenceArray[Int.random(in: 0...3)])
+                Text(consequence.randomCleaningConsequence[Int.random(in: 0...3)])
                     .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                     .padding()
                     

@@ -8,7 +8,7 @@
 import Foundation
 
 class CleaningTips {
-    var randomCleaningTips: [String] = [
+   static var randomTips: [String] = [
         
         "Choose cleaning products labeled as eco-friendly, biodegradable, and free of harmful chemicals. These products are less harmful to aquatic life and waterways.",
         

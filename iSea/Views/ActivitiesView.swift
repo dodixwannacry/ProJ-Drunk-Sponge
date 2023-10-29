@@ -51,7 +51,9 @@ struct ActivitiesView: View {
                                 .cornerRadius(15)
                                 .padding(.horizontal)
                         }
+                        
                     }
+                    
                 }
                     
         }

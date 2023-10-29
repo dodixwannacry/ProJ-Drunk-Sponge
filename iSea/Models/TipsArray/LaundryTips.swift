@@ -9,7 +9,7 @@
 import Foundation
 
 class LaundryTips {
-    var randomLaundryTips: [String] = [
+  static var randomTips: [String] = [
         
     "Using a Guppyfriend bag or similar can reduce microfiber release during washes!",
 

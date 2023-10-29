@@ -9,14 +9,16 @@
 /* Begin PBXBuildFile section */
 		F375BD402AE285B60044F13A /* UserImpactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD3F2AE285B60044F13A /* UserImpactView.swift */; };
 		F375BD422AE7AD0A0044F13A /* ConsequencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD412AE7AD0A0044F13A /* ConsequencesView.swift */; };
-		F375BD452AE7CE920044F13A /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F375BD432AE7CE920044F13A /* Database.xcdatamodeld */; };
-		F375BD4E2AEBAE510044F13A /* ConsequencesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD4D2AEBAE510044F13A /* ConsequencesArray.swift */; };
-		F375BD522AED56FC0044F13A /* LaundryTipsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD512AED56FC0044F13A /* LaundryTipsArray.swift */; };
-		F375BD542AED58810044F13A /* ShowerTipsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD532AED58810044F13A /* ShowerTipsArray.swift */; };
-		F375BD562AED59EF0044F13A /* CleaningTipsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD552AED59EF0044F13A /* CleaningTipsArray.swift */; };
-		F375BD582AED59FC0044F13A /* DishesTipsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD572AED59FC0044F13A /* DishesTipsArray.swift */; };
+		F375BD522AED56FC0044F13A /* LaundryTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD512AED56FC0044F13A /* LaundryTips.swift */; };
+		F375BD542AED58810044F13A /* ShowerTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD532AED58810044F13A /* ShowerTips.swift */; };
+		F375BD562AED59EF0044F13A /* CleaningTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD552AED59EF0044F13A /* CleaningTips.swift */; };
+		F375BD582AED59FC0044F13A /* DishesTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD572AED59FC0044F13A /* DishesTips.swift */; };
 		F375BD5A2AEDE0C20044F13A /* InputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD592AEDE0C20044F13A /* InputModel.swift */; };
 		F375BD5C2AEDE1E20044F13A /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD5B2AEDE1E20044F13A /* InputView.swift */; };
+		F375BD5E2AEE79740044F13A /* LaundryConsequencesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD5D2AEE79740044F13A /* LaundryConsequencesArray.swift */; };
+		F375BD602AEE7E9E0044F13A /* ShowerConseqArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD5F2AEE7E9E0044F13A /* ShowerConseqArray.swift */; };
+		F375BD622AEE7F1B0044F13A /* DishesConseqArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD612AEE7F1B0044F13A /* DishesConseqArray.swift */; };
+		F375BD642AEE7F970044F13A /* CleaningConseqArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD632AEE7F970044F13A /* CleaningConseqArray.swift */; };
 		F3C68A0B2AE11D8900241897 /* iSeaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C68A0A2AE11D8900241897 /* iSeaApp.swift */; };
 		F3C68A0F2AE11D8B00241897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C68A0E2AE11D8B00241897 /* Assets.xcassets */; };
 		F3C68A122AE11D8B00241897 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C68A112AE11D8B00241897 /* Preview Assets.xcassets */; };
@@ -49,14 +51,16 @@
 /* Begin PBXFileReference section */
 		F375BD3F2AE285B60044F13A /* UserImpactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImpactView.swift; sourceTree = "<group>"; };
 		F375BD412AE7AD0A0044F13A /* ConsequencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsequencesView.swift; sourceTree = "<group>"; };
-		F375BD442AE7CE920044F13A /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
-		F375BD4D2AEBAE510044F13A /* ConsequencesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsequencesArray.swift; sourceTree = "<group>"; };
-		F375BD512AED56FC0044F13A /* LaundryTipsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryTipsArray.swift; sourceTree = "<group>"; };
-		F375BD532AED58810044F13A /* ShowerTipsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowerTipsArray.swift; sourceTree = "<group>"; };
-		F375BD552AED59EF0044F13A /* CleaningTipsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningTipsArray.swift; sourceTree = "<group>"; };
-		F375BD572AED59FC0044F13A /* DishesTipsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTipsArray.swift; sourceTree = "<group>"; };
+		F375BD512AED56FC0044F13A /* LaundryTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryTips.swift; sourceTree = "<group>"; };
+		F375BD532AED58810044F13A /* ShowerTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowerTips.swift; sourceTree = "<group>"; };
+		F375BD552AED59EF0044F13A /* CleaningTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningTips.swift; sourceTree = "<group>"; };
+		F375BD572AED59FC0044F13A /* DishesTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTips.swift; sourceTree = "<group>"; };
 		F375BD592AEDE0C20044F13A /* InputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputModel.swift; sourceTree = "<group>"; };
 		F375BD5B2AEDE1E20044F13A /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		F375BD5D2AEE79740044F13A /* LaundryConsequencesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryConsequencesArray.swift; sourceTree = "<group>"; };
+		F375BD5F2AEE7E9E0044F13A /* ShowerConseqArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowerConseqArray.swift; sourceTree = "<group>"; };
+		F375BD612AEE7F1B0044F13A /* DishesConseqArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesConseqArray.swift; sourceTree = "<group>"; };
+		F375BD632AEE7F970044F13A /* CleaningConseqArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningConseqArray.swift; sourceTree = "<group>"; };
 		F3C68A072AE11D8900241897 /* iSea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C68A0A2AE11D8900241897 /* iSeaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSeaApp.swift; sourceTree = "<group>"; };
 		F3C68A0E2AE11D8B00241897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,10 +109,31 @@
 			path = Modals;
 			sourceTree = "<group>";
 		};
+		F375BD652AEE807E0044F13A /* ConsequencesArray */ = {
+			isa = PBXGroup;
+			children = (
+				F375BD632AEE7F970044F13A /* CleaningConseqArray.swift */,
+				F375BD612AEE7F1B0044F13A /* DishesConseqArray.swift */,
+				F375BD5F2AEE7E9E0044F13A /* ShowerConseqArray.swift */,
+				F375BD5D2AEE79740044F13A /* LaundryConsequencesArray.swift */,
+			);
+			path = ConsequencesArray;
+			sourceTree = "<group>";
+		};
+		F375BD662AEE80C00044F13A /* TipsArray */ = {
+			isa = PBXGroup;
+			children = (
+				F375BD532AED58810044F13A /* ShowerTips.swift */,
+				F375BD512AED56FC0044F13A /* LaundryTips.swift */,
+				F375BD572AED59FC0044F13A /* DishesTips.swift */,
+				F375BD552AED59EF0044F13A /* CleaningTips.swift */,
+			);
+			path = TipsArray;
+			sourceTree = "<group>";
+		};
 		F3C689FE2AE11D8900241897 = {
 			isa = PBXGroup;
 			children = (
-				F375BD432AE7CE920044F13A /* Database.xcdatamodeld */,
 				F3C68A092AE11D8900241897 /* iSea */,
 				F3C68A1A2AE11D8B00241897 /* iSeaTests */,
 				F3C68A242AE11D8B00241897 /* iSeaUITests */,
@@ -178,13 +203,10 @@
 		F3C68A3B2AE1271B00241897 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F375BD4D2AEBAE510044F13A /* ConsequencesArray.swift */,
+				F375BD652AEE807E0044F13A /* ConsequencesArray */,
+				F375BD662AEE80C00044F13A /* TipsArray */,
 				F3C68A342AE11EFC00241897 /* ActivitiesModel.swift */,
 				F3C68A392AE1271100241897 /* ActivitiesViewModel.swift */,
-				F375BD512AED56FC0044F13A /* LaundryTipsArray.swift */,
-				F375BD532AED58810044F13A /* ShowerTipsArray.swift */,
-				F375BD552AED59EF0044F13A /* CleaningTipsArray.swift */,
-				F375BD572AED59FC0044F13A /* DishesTipsArray.swift */,
 				F375BD592AEDE0C20044F13A /* InputModel.swift */,
 			);
 			path = Models;
@@ -320,21 +342,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F375BD5E2AEE79740044F13A /* LaundryConsequencesArray.swift in Sources */,
 				F3C68A352AE11EFC00241897 /* ActivitiesModel.swift in Sources */,
-				F375BD522AED56FC0044F13A /* LaundryTipsArray.swift in Sources */,
-				F375BD582AED59FC0044F13A /* DishesTipsArray.swift in Sources */,
-				F375BD562AED59EF0044F13A /* CleaningTipsArray.swift in Sources */,
+				F375BD602AEE7E9E0044F13A /* ShowerConseqArray.swift in Sources */,
+				F375BD522AED56FC0044F13A /* LaundryTips.swift in Sources */,
+				F375BD582AED59FC0044F13A /* DishesTips.swift in Sources */,
+				F375BD562AED59EF0044F13A /* CleaningTips.swift in Sources */,
 				F375BD422AE7AD0A0044F13A /* ConsequencesView.swift in Sources */,
 				F375BD5A2AEDE0C20044F13A /* InputModel.swift in Sources */,
-				F375BD542AED58810044F13A /* ShowerTipsArray.swift in Sources */,
+				F375BD542AED58810044F13A /* ShowerTips.swift in Sources */,
 				F375BD402AE285B60044F13A /* UserImpactView.swift in Sources */,
-				F375BD452AE7CE920044F13A /* Database.xcdatamodeld in Sources */,
 				F375BD5C2AEDE1E20044F13A /* InputView.swift in Sources */,
 				F3C68A3A2AE1271100241897 /* ActivitiesViewModel.swift in Sources */,
-				F375BD4E2AEBAE510044F13A /* ConsequencesArray.swift in Sources */,
+				F375BD642AEE7F970044F13A /* CleaningConseqArray.swift in Sources */,
 				F3C68A3F2AE1BA3300241897 /* ActivitiesView.swift in Sources */,
 				F3C68A432AE1C54300241897 /* ActivityChartView.swift in Sources */,
 				F3C68A0B2AE11D8900241897 /* iSeaApp.swift in Sources */,
+				F375BD622AEE7F1B0044F13A /* DishesConseqArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,19 +688,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F375BD432AE7CE920044F13A /* Database.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F375BD442AE7CE920044F13A /* Database.xcdatamodel */,
-			);
-			currentVersion = F375BD442AE7CE920044F13A /* Database.xcdatamodel */;
-			path = Database.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F3C689FF2AE11D8900241897 /* Project object */;
 }
