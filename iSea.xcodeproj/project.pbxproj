@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F331F7B52AEFC147001A7F15 /* WPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F331F7B42AEFC147001A7F15 /* WPIModel.swift */; };
 		F375BD402AE285B60044F13A /* UserImpactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD3F2AE285B60044F13A /* UserImpactView.swift */; };
 		F375BD422AE7AD0A0044F13A /* ConsequencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD412AE7AD0A0044F13A /* ConsequencesView.swift */; };
 		F375BD522AED56FC0044F13A /* LaundryTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375BD512AED56FC0044F13A /* LaundryTips.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F331F7B42AEFC147001A7F15 /* WPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPIModel.swift; sourceTree = "<group>"; };
 		F375BD3F2AE285B60044F13A /* UserImpactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImpactView.swift; sourceTree = "<group>"; };
 		F375BD412AE7AD0A0044F13A /* ConsequencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsequencesView.swift; sourceTree = "<group>"; };
 		F375BD512AED56FC0044F13A /* LaundryTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryTips.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				F375BD692AEEEEDB0044F13A /* ImpactDBModel.swift */,
+				F331F7B42AEFC147001A7F15 /* WPIModel.swift */,
 				F375BD652AEE807E0044F13A /* ConsequencesArray */,
 				F375BD662AEE80C00044F13A /* TipsArray */,
 				F3C68A342AE11EFC00241897 /* ActivitiesModel.swift */,
@@ -358,6 +361,7 @@
 				F375BD5C2AEDE1E20044F13A /* InputView.swift in Sources */,
 				F3C68A3A2AE1271100241897 /* ActivitiesViewModel.swift in Sources */,
 				F375BD642AEE7F970044F13A /* CleaningConseqArray.swift in Sources */,
+				F331F7B52AEFC147001A7F15 /* WPIModel.swift in Sources */,
 				F375BD6A2AEEEEDB0044F13A /* ImpactDBModel.swift in Sources */,
 				F3C68A3F2AE1BA3300241897 /* ActivitiesView.swift in Sources */,
 				F3C68A432AE1C54300241897 /* ActivityChartView.swift in Sources */,
@@ -526,7 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iSea/Preview Content\"";
-				DEVELOPMENT_TEAM = 9L5T2ZCJNR;
+				DEVELOPMENT_TEAM = CCDU57P7JZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -555,7 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iSea/Preview Content\"";
-				DEVELOPMENT_TEAM = 9L5T2ZCJNR;
+				DEVELOPMENT_TEAM = CCDU57P7JZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

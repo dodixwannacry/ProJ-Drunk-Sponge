@@ -42,7 +42,7 @@ struct ActivityChartView: View {
         return randomTips[Int.random(in: 0...randomTips.count-1)]
     }
     
-   // @Query(sort: \ImpactDBModel.date) var impacts: [ImpactDBModel]
+   @Query(sort: \ImpactDBModel.date) var impacts: [ImpactDBModel]
 
     
     var body: some View {
@@ -168,7 +168,7 @@ struct ActivityChartView: View {
                     HStack {
                         Spacer()
                             .frame(width: 18)
-                        Text("impacts[0].activity") //non è testo
+                        Text(impacts.count >= 1 ? impacts[0].input : "No impact")
                             .foregroundStyle(.white)
                         Spacer()
                         Text("10/10/2023")
@@ -183,7 +183,7 @@ struct ActivityChartView: View {
                     HStack {
                         Spacer()
                             .frame(width: 18)
-                        Text("0.00 kgs")
+                        Text(impacts.count >= 2 ? impacts[1].input : "No impact")
                             .foregroundStyle(.white)
                         Spacer()
                         Text("10/10/2023")
@@ -198,7 +198,7 @@ struct ActivityChartView: View {
                     HStack {
                         Spacer()
                             .frame(width: 18)
-                        Text("0.00 kgs")
+                        Text(impacts.count >= 3 ? impacts[2].input : "No impact")
                             .foregroundStyle(.white)
                         Spacer()
                         Text("10/10/2023")
@@ -213,7 +213,7 @@ struct ActivityChartView: View {
                     HStack {
                         Spacer()
                             .frame(width: 18)
-                        Text("0.00 kgs")
+                        Text(impacts.count >= 4 ? impacts[3].input : "No impact")
                             .foregroundStyle(.white)
                         Spacer()
                         Text("10/10/2023")
