@@ -110,7 +110,7 @@ struct InputView: View {
                     .frame(width: 150)
                     Button(action: {
                         print(selectedButtonIndex)
-                        let impact = ImpactDBModel(date: Date(), activity: inputViewModel.activityName, input: inputViewModel.buttonValues[selectedButtonIndex])
+                        let impact = ImpactDBModel(date: Date(), activity: inputViewModel.activityName, input: inputViewModel.buttonValues[selectedButtonIndex-1])
                         modelContext.insert(impact)
                         do {
                             try modelContext.save()

@@ -7,7 +7,7 @@
 import Foundation
 
 class ShowerConsequences {
-    var randomShowerConsequence: [String] = [
+   static var randomShowerConsequence: [String] = [
         
         "Our personal care products, from shampoos to soaps, often contain chemicals and microplastics that, when washed off, find their way into our water systems, eventually leading to ocean pollution.\nThe marine life pays the price, as they ingest these pollutants, creating potential threats to their health and the health of those who rely on the sea's resources. And let's not forget the energy we use to heat water for showers, a process that contributes to carbon emissions and, in turn, climate change. As the Earth warms, oceans are impacted, leading to issues like sea level rise and ocean acidification.\nIt's crucial that we consider these factors in our daily routines and work towards more sustainable alternatives.",
         

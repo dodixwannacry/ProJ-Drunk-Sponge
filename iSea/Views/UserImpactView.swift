@@ -20,6 +20,13 @@ struct UserImpactView: View {
                 .reduce(0, +)
     }
     
+    var calculateDailyWPI: Double {
+        return allImpactsForTheWeek
+            .filter{$0.date >= Calendar.current.startOfDay(for: Date())}
+            .map{ WPICalculator.calculate(impactName: $0.activity, impactValue: $0.input) }
+            .reduce(0, +)
+    }
+    
     
     @Query ()
     var allImpactsForTheWeek: [ImpactDBModel]
@@ -46,7 +53,7 @@ struct UserImpactView: View {
                 Spacer()
             }
             VStack{
-                Text("0.00 Kg")
+                Text("\(String(format: "%.2f",calculateDailyWPI)) kg")
                     .fontWeight(.semibold)
                     .foregroundColor(Color.teal)
                     .font(.system(size: 65))

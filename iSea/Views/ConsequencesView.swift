@@ -9,7 +9,24 @@ import SwiftUI
 
 struct ConsequencesView: View {
     
-    let consequence = CleaningConsequences() //ne ho messa una a caso giusto per far funzionare la preview e fare altro. Vedi come far fare in modo tale che in base alla pagina dell'attività in cui ti trovi, le conseguenze siano correlate a quell'attività
+    var consequence: String {
+        var randomConsequence: [String]
+        switch (consequencesName) {
+        case "Doing laundry":
+            randomConsequence = LaundryConsequences.randomLaundryConsequence
+        case "Showering":
+            randomConsequence = ShowerConsequences.randomShowerConsequence
+        case "Doing dishes":
+            randomConsequence = DishesConsequences.randomDishesConsequence
+        case "Cleaning":
+            randomConsequence = CleaningConsequences.randomCleaningConsequence
+        default:
+            randomConsequence = []
+        }
+        return randomConsequence[Int.random(in: 0...randomConsequence.count-1)]
+    }
+    
+    let consequencesName: String
     
     var body: some View {
         NavigationStack {
@@ -46,7 +63,7 @@ struct ConsequencesView: View {
                     Spacer()
                     
                 }
-                Text(consequence.randomCleaningConsequence[Int.random(in: 0...3)])
+                Text(consequence)
                     .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                     .padding()
                     
@@ -61,7 +78,7 @@ struct ConsequencesView: View {
     }
 }
         #Preview {
-            ConsequencesView()
+            ConsequencesView(consequencesName: "Doing laundry")
         }
     
 

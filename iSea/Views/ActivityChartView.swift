@@ -42,14 +42,19 @@ struct ActivityChartView: View {
         return randomTips[Int.random(in: 0...randomTips.count-1)]
     }
     
-   @Query(sort: \ImpactDBModel.date) var impacts: [ImpactDBModel]
+    @Query(sort: \ImpactDBModel.date, order: .reverse)
+    var allImpacts: [ImpactDBModel]
+    
+    var impacts: [ImpactDBModel] {
+        return allImpacts.filter{$0.activity == activity.name}
+    }
 
     
     var body: some View {
         NavigationStack {
             VStack (spacing: 1){
                 
-                NavigationLink(destination: ConsequencesView()){
+                NavigationLink(destination: ConsequencesView(consequencesName: activity.name)){
                     ZStack(alignment: .topLeading) {
                         Image("cristian-palmer-XexawgzYOBc-unsplash")
                             .resizable()
@@ -61,8 +66,8 @@ struct ActivityChartView: View {
                             .frame(width: 360, height: 187)
                         
                         
-                        Text("Curiosities about sea pollution").font(.title).bold()
-                            .padding(.top, 100)
+                        Text("Curiosities about the effects of \(activity.name.lowercased()) on sea pollution").font(.title).bold()
+                            .padding(.top, 70)
                             .padding(.horizontal, 15)
                             .foregroundStyle(Color.white)
                             .multilineTextAlignment(.leading)
@@ -120,7 +125,10 @@ struct ActivityChartView: View {
                     Spacer()
                         .frame(width: 15)
                     HStack(alignment: .center ,content: {
-                        Text("\(WPICalculator.calculate(impactName: "shower", impactValue: "5 min")) Kg")
+                        Text(
+                            "\(String(format: "%.2f", WPICalculator.calculate(impactName: activity.name, impactValue: impacts.filter{$0.date >= Calendar.current.startOfDay(for: Date())}.filter{$0.activity == activity.name}.first?.input ?? "0.00"))) kg"
+                        )
+                        
                             .font(.system(size: 60))
                             .font(.largeTitle)
                             .foregroundColor(Color.teal)
@@ -168,10 +176,26 @@ struct ActivityChartView: View {
                     HStack {
                         Spacer()
                             .frame(width: 18)
-                        Text(impacts.count >= 1 ? impacts[0].input : "No impact")
+                        Text(impacts.count >= 1 ? "\(String(format: "%.2f",WPICalculator.calculate(impactName: impacts[0].activity, impactValue: impacts[0].input))) Kg" : "No impact")
                             .foregroundStyle(.white)
                         Spacer()
-                        Text("10/10/2023")
+                        Text(impacts.count >= 1 ? " \(dateFormatter.string(from: impacts[0].date))" : "00/00/0000")
+                            .foregroundStyle(.white)
+                        Spacer()
+                            .frame(width: 18)
+                        
+                    }
+                    Divider()
+                        .frame(height: 1)
+                        .overlay(.white)
+                        .padding(.horizontal, 24)
+                    HStack {
+                        Spacer()
+                            .frame(width: 18)
+                        Text(impacts.count >= 2 ? "\(String(format: "%.2f",WPICalculator.calculate(impactName: impacts[1].activity, impactValue: impacts[1].input))) Kg" : "No impact")
+                            .foregroundStyle(.white)
+                        Spacer()
+                        Text(impacts.count >= 2 ? " \(dateFormatter.string(from: impacts[0].date))" : "00/00/0000")
                             .foregroundStyle(.white)
                         Spacer()
                             .frame(width: 18)
@@ -183,25 +207,10 @@ struct ActivityChartView: View {
                     HStack {
                         Spacer()
                             .frame(width: 18)
-                        Text(impacts.count >= 2 ? impacts[1].input : "No impact")
+                        Text(impacts.count >= 3 ? "\(String(format: "%.2f",WPICalculator.calculate(impactName: impacts[2].activity, impactValue: impacts[2].input))) Kg" : "No impact")
                             .foregroundStyle(.white)
                         Spacer()
-                        Text("10/10/2023")
-                            .foregroundStyle(.white)
-                        Spacer()
-                            .frame(width: 18)
-                    }
-                    Divider()
-                        .frame(height: 1)
-                        .overlay(.white)
-                        .padding(.horizontal, 24)
-                    HStack {
-                        Spacer()
-                            .frame(width: 18)
-                        Text(impacts.count >= 3 ? impacts[2].input : "No impact")
-                            .foregroundStyle(.white)
-                        Spacer()
-                        Text("10/10/2023")
+                        Text(impacts.count >= 3 ? " \(dateFormatter.string(from: impacts[0].date))" : "00/00/0000")
                             .foregroundStyle(.white)
                         Spacer()
                             .frame(width: 18)
@@ -213,10 +222,10 @@ struct ActivityChartView: View {
                     HStack {
                         Spacer()
                             .frame(width: 18)
-                        Text(impacts.count >= 4 ? impacts[3].input : "No impact")
+                        Text(impacts.count >= 4 ? "\(String(format: "%.2f",WPICalculator.calculate(impactName: impacts[3].activity, impactValue: impacts[3].input))) Kg" : "No impact")
                             .foregroundStyle(.white)
                         Spacer()
-                        Text("10/10/2023")
+                        Text(impacts.count >= 4 ? " \(dateFormatter.string(from: impacts[0].date))" : "00/00/0000")
                             .foregroundStyle(.white)
                         Spacer()
                             .frame(width: 18)

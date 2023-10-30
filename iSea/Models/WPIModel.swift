@@ -97,8 +97,9 @@ class WPICalculator {
         
         // Dopo aver implementato tutti e 4 quelli sopra, questo ti calcola in base al nome dell'impact (quello che sta nel DB, tipo "laundry", "dishes" etc.):
        public static func calculate(impactName: String, impactValue: String) -> Double {
+           print(impactName, impactValue)
             switch(impactName) {
-            case "Doing Laundry":
+            case "Doing laundry":
                 return Double(round(calculateLaundry(input: impactValue)*100)/100)
             case "Doing dishes":
                 return Double(round(calculateDishes(input: impactValue)*100)/100)

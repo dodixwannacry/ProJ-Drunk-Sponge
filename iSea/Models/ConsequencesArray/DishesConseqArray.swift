@@ -8,7 +8,7 @@
 import Foundation
 
 class DishesConsequences {
-    var randomDishesConsequence: [String] = [
+    static var randomDishesConsequence: [String] = [
         
         "The detergents we use often for doing dishes, contain chemicals like phosphates and surfactants, which, when they find their way into water bodies, pose a threat to aquatic life, disrupting ecosystems and harming aquatic organisms.\nMoreover, the fats and oils from our dishes, if not managed properly, can enter wastewater and reach the sea, creating a film on the water's surface that hinders oxygen exchange and affects marine life. Additionally, nitrogen and phosphorus are excess nutrients promote the growth of algae and other plants in coastal waters, potentially triggering harmful algal blooms and oxygen depletion in aquatic environments.",
         

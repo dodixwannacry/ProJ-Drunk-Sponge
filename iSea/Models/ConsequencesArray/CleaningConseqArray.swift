@@ -8,7 +8,7 @@
 import Foundation
 
 class CleaningConsequences {
-    var randomCleaningConsequence: [String] = [
+    static var randomCleaningConsequence: [String] = [
         
         "Household cleaning products, while vital for maintaining hygiene, often contain chemicals like surfactants, disinfectants, and fragrances.\nWhen these chemicals go down our drains, they pose a significant threat to aquatic ecosystems, compromising water quality and the balance of aquatic life.\nOne major concern is nutrient pollution, with products containing phosphates and nitrogen compounds. These substances, once in water bodies, contribute to nutrient pollution, fueling algal blooms and oxygen depletion, which is detrimental to marine life.\nAdditionally, microplastics are an issue, as some cleaning products contain them, and these tiny particles end up in our oceans, worsening the problem of marine microplastic pollution.",
         

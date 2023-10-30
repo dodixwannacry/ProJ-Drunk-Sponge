@@ -8,7 +8,7 @@
 import Foundation
 
 class LaundryConsequences {
-    var randomLaundryConsequence: [String] = [
+    static var randomLaundryConsequence: [String] = [
         
         "Laundry may seem harmless, but every wash of synthetic fabrics releases countless microplastic fibers into the water. Over time, these infiltrate marine life, potentially impacting human health.\nBut that's not the only concern: laundry wastewater carries chemicals from detergents, fabric softeners, and stain removers, disrupting marine ecosystems by affecting aquatic life's reproduction and feeding patterns.\nThis disruption also alters marine species' natural behavior, causing abnormal migration, reproductive issues, and population decline. Our oceans, the lifeblood of our planet, face a dire threat from something as simple as doing the laundry.",
     
