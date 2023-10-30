@@ -60,10 +60,14 @@ struct ActivityChartView: View {
                         Rectangle().fill(LinearGradient(colors: [.clear, .black.opacity(0.3)], startPoint: .top, endPoint: .bottom))
                             .frame(width: 360, height: 187)
                         
+                        
                         Text("Curiosities about sea pollution").font(.title).bold()
+                            .padding(.top, 100)
+                            .padding(.horizontal, 15)
                             .foregroundStyle(Color.white)
-                            .padding(.top, 60)
-                            .padding(.all, 15)
+                            .multilineTextAlignment(.leading)
+                            
+                            
                         
                             
                         
