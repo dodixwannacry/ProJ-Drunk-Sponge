@@ -42,7 +42,7 @@ struct ActivityChartView: View {
         return randomTips[Int.random(in: 0...randomTips.count-1)]
     }
     
-    @Query(sort: \ImpactDBModel.date) var impacts: [ImpactDBModel]
+   // @Query(sort: \ImpactDBModel.date) var impacts: [ImpactDBModel]
 
     
     var body: some View {
@@ -164,7 +164,7 @@ struct ActivityChartView: View {
                     HStack {
                         Spacer()
                             .frame(width: 18)
-                        Text(impacts[0].activity)
+                        Text("impacts[0].activity") //non è testo
                             .foregroundStyle(.white)
                         Spacer()
                         Text("10/10/2023")
