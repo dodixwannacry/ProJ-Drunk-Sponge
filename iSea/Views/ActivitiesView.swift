@@ -9,9 +9,9 @@ import SwiftUI
 
 
 struct ActivitiesView: View {
-    
     @ObservedObject var viewModel = ActivitiesViewModel()
-    
+    @State private var isSelected: Bool = false // Variabile di stato per tenere traccia dello stato selezionato
+
     var body: some View {
             NavigationStack {
                 HStack {
@@ -38,8 +38,15 @@ struct ActivitiesView: View {
                                         .aspectRatio(contentMode: .fill)
                                         .frame(height: 200)
                                         .grayscale(1)
+                                        .background(isSelected ? Color.teal : Color.teal) // Cambia il colore in base a isSelected
+                                                    .onTapGesture {
+                                                        isSelected.toggle() // Cambia lo stato quando la Card viene cliccata
+                                                    }
+                                    
                                         
                                     Rectangle().fill(LinearGradient(colors: [.clear, .black.opacity(0.6)], startPoint: .top, endPoint: .bottom))
+                                    
+                                    
                                     VStack(alignment: .leading) {
                                         Text(activity.name).font(.title).bold()
                                     }
@@ -59,6 +66,7 @@ struct ActivitiesView: View {
         }
     }
 }
+
 
 #Preview {
     ActivitiesView()
