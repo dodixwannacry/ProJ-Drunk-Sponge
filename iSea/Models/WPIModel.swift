@@ -90,24 +90,25 @@ class WPICalculator {
         default:
             return 0.00
         }
+    }
         
         
         
         
         // Dopo aver implementato tutti e 4 quelli sopra, questo ti calcola in base al nome dell'impact (quello che sta nel DB, tipo "laundry", "dishes" etc.):
-        func calculate(impactName: String, impactValue: String) -> Double {
+       public static func calculate(impactName: String, impactValue: String) -> Double {
             switch(impactName) {
-            case "laundry":
-                return calculateLaundry(input: impactValue)
-            case "dishes":
-                return calculateDishes(input: impactValue)
-            case "shower":
-                return calculateShowering(input: impactValue)
-            case "cleaning":
-                return calculateCleaning(input: impactValue)
+            case "Doing Laundry":
+                return Double(round(calculateLaundry(input: impactValue)*100)/100)
+            case "Doing dishes":
+                return Double(round(calculateDishes(input: impactValue)*100)/100)
+            case "Showering":
+                return Double(round(calculateShowering(input: impactValue)*100)/100)
+            case "Cleaning":
+                return Double(round(calculateCleaning(input: impactValue)*100)/100)
             default:
                 return 0
             }
         }
     }
-}
+

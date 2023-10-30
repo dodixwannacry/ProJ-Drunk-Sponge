@@ -106,13 +106,13 @@ struct ActivityChartView: View {
                     .sheet(isPresented: $viewButton) {
                         switch (activity.name) {
                         case "Doing laundry":
-                            InputView(inputViewModel: InputModel(question: "How many loads of laundry have you done today?", activityName: "laundry", buttonValues: ["1","2","3","4","5","6"]))
+                            InputView(inputViewModel: InputModel(question: "How many loads of laundry have you done today?", activityName: activity.name, buttonValues: ["1","2","3","4","5","6"]))
                         case "Showering":
-                            InputView(inputViewModel: InputModel(question: "How long did your last shower last?", activityName: "showering", buttonValues: ["5 min","10 min","15 min","20 min","25 min","30 min"]))
+                            InputView(inputViewModel: InputModel(question: "How long did your last shower last?", activityName: activity.name, buttonValues: ["5 min","10 min","15 min","20 min","25 min","30 min"]))
                         case "Doing dishes":
-                            InputView(inputViewModel: InputModel(question: "How much time did you spend doing the dishes today?", activityName: "dishes", buttonValues: ["5 min","10 min","15 min","20 min","25 min","30 min"]))
+                            InputView(inputViewModel: InputModel(question: "How much time did you spend doing the dishes today?", activityName: activity.name, buttonValues: ["5 min","10 min","15 min","20 min","25 min","30 min"]))
                         case "Cleaning":
-                            InputView(inputViewModel: InputModel(question: "How many sessions of cleaning have you done today?", activityName: "cleaning", buttonValues: ["1","2","3","4","5","6"]))
+                            InputView(inputViewModel: InputModel(question: "How many sessions of cleaning have you done today?", activityName: activity.name, buttonValues: ["1","2","3","4","5","6"]))
                         default:
                             EmptyView()
                         }
@@ -120,7 +120,7 @@ struct ActivityChartView: View {
                     Spacer()
                         .frame(width: 15)
                     HStack(alignment: .center ,content: {
-                        Text("0.00 Kg")
+                        Text("\(WPICalculator.calculate(impactName: "shower", impactValue: "5 min")) Kg")
                             .font(.system(size: 60))
                             .font(.largeTitle)
                             .foregroundColor(Color.teal)
