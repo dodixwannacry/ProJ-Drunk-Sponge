@@ -10,5 +10,6 @@ import Foundation
 struct InputModel: Identifiable {
     var id: UUID = UUID()
     var question: String
+    var activityName: String
     var buttonValues: [String]
 }

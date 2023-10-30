@@ -5,6 +5,7 @@
 //  Created by Ilaria Poziello on 29/10/23.
 
 import SwiftUI
+import SwiftData
 
 struct InputView: View {
     
@@ -15,6 +16,7 @@ struct InputView: View {
     @State var selectedButtonIndex: Int = 0
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.modelContext) var modelContext
     
     var body: some View {
         NavigationStack {
@@ -106,7 +108,18 @@ struct InputView: View {
                     })
                     .padding()
                     .frame(width: 150)
-                    Button(action: {save.toggle()}, label: {
+                    Button(action: {
+                        print(selectedButtonIndex)
+                        let impact = ImpactDBModel(date: Date(), activity: inputViewModel.activityName, input: inputViewModel.buttonValues[selectedButtonIndex])
+                        modelContext.insert(impact)
+                        do {
+                            try modelContext.save()
+                        } catch {
+                            print(error.localizedDescription)
+                        }
+                        presentationMode.wrappedValue.dismiss()
+                        
+                    }, label: {
                         Text("Save").font(.title)
                             .bold()
                             .foregroundColor(.black)
@@ -122,5 +135,5 @@ struct InputView: View {
 }
 
 #Preview {
-    InputView(inputViewModel: InputModel(question: "activity question example", buttonValues: ["1","2","3","4","5","6"]))
+    InputView(inputViewModel: InputModel(question: "activity question example", activityName: "Laundry", buttonValues: ["1","2","3","4","5","6"]))
 }

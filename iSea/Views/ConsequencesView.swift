@@ -15,11 +15,18 @@ struct ConsequencesView: View {
         NavigationStack {
             ScrollView() {
                 VStack {
-                    Text("Consequences")
-                        .font(.largeTitle)
-                        .bold()
-                    
-                        .frame(width: 240)
+                    HStack {
+                        Spacer()
+                        Text("Curiosities")
+                            .font(.largeTitle)
+                            .bold()
+                        Spacer()
+                        
+                        .frame(width: 200)
+                        
+                    }
+                    Spacer()
+                        .frame(height: 2)
                     ZStack(alignment: .topLeading) {
                         Image("consequences")
                             .resizable()

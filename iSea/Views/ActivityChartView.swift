@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Foundation
+import SwiftData
 
 struct ActivityChartView: View {
     
@@ -41,6 +42,9 @@ struct ActivityChartView: View {
         return randomTips[Int.random(in: 0...randomTips.count-1)]
     }
     
+    @Query(sort: \ImpactDBModel.date) var impacts: [ImpactDBModel]
+
+    
     var body: some View {
         NavigationStack {
             VStack (spacing: 1){
@@ -56,9 +60,12 @@ struct ActivityChartView: View {
                         Rectangle().fill(LinearGradient(colors: [.clear, .black.opacity(0.3)], startPoint: .top, endPoint: .bottom))
                             .frame(width: 360, height: 187)
                         
-                        Text("The consequences of \(activity.name.lowercased()) on sea pollution").font(.title).bold()
+                        Text("Curiosities about sea pollution").font(.title).bold()
                             .foregroundStyle(Color.white)
-                            .padding(.all, 30)
+                            .padding(.top, 60)
+                            .padding(.all, 15)
+                        
+                            
                         
                     }
                     .cornerRadius(20)
@@ -95,13 +102,13 @@ struct ActivityChartView: View {
                     .sheet(isPresented: $viewButton) {
                         switch (activity.name) {
                         case "Doing laundry":
-                            InputView(inputViewModel: InputModel(question: "How many loads of laundry have you done today?", buttonValues: ["1","2","3","4","5","6"]))
+                            InputView(inputViewModel: InputModel(question: "How many loads of laundry have you done today?", activityName: "laundry", buttonValues: ["1","2","3","4","5","6"]))
                         case "Showering":
-                            InputView(inputViewModel: InputModel(question: "How long did your last shower last?", buttonValues: ["5 min","10 min","15 min","20 min","25 min","30 min"]))
+                            InputView(inputViewModel: InputModel(question: "How long did your last shower last?", activityName: "showering", buttonValues: ["5 min","10 min","15 min","20 min","25 min","30 min"]))
                         case "Doing dishes":
-                            InputView(inputViewModel: InputModel(question: "How much time did you spend doing the dishes today?", buttonValues: ["5 min","10 min","15 min","20 min","25 min","30 min"]))
+                            InputView(inputViewModel: InputModel(question: "How much time did you spend doing the dishes today?", activityName: "dishes", buttonValues: ["5 min","10 min","15 min","20 min","25 min","30 min"]))
                         case "Cleaning":
-                            InputView(inputViewModel: InputModel(question: "How many sessions of cleaning have you done today?", buttonValues: ["1","2","3","4","5","6"]))
+                            InputView(inputViewModel: InputModel(question: "How many sessions of cleaning have you done today?", activityName: "cleaning", buttonValues: ["1","2","3","4","5","6"]))
                         default:
                             EmptyView()
                         }
@@ -130,7 +137,7 @@ struct ActivityChartView: View {
                         .alert(isPresented: $showAlert) {
                             Alert(
                                 title: Text("What does WPI mean?"),
-                                message: Text("WPI is a formula that allows to calculate the kgs of pollution.\n WPI = (water)x(shjk)"),
+                                message: Text("WPI is a formula that allows to calculate the amount of pollution in kgs.\n WPI = (Water Usage) x (Pollutant Release per Unit Water Used) + (Energy Usage) x (Carbon Emission per Unit Energy)"),
                                 dismissButton: .default(Text("Back"))
                             )
                         }
@@ -157,7 +164,7 @@ struct ActivityChartView: View {
                     HStack {
                         Spacer()
                             .frame(width: 18)
-                        Text("0.00 kgs")
+                        Text(impacts[0].activity)
                             .foregroundStyle(.white)
                         Spacer()
                         Text("10/10/2023")
