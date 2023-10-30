@@ -19,28 +19,13 @@ struct UserImpactView: View {
             }
             VStack(alignment: .leading) {
                 VStack {
-                    Text("Amount of Pollution")
+                    Text("Amount of daily Pollution")
                         .font(.system(size: 20))
                         .multilineTextAlignment(.leading)
                         .bold()
-                        .padding(.trailing, 200.0)
-                    
-                    
-                    
-                    HStack{
-                        Text("This is your weekly impact")
-                            .font(.subheadline)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color.gray)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(nil)
-                            .padding([.leading, .bottom, .trailing], 8.0)
-                        Spacer()
-                        
-                    }
-                    
-                    
+                        .padding(.trailing)
                 }
+                Spacer()
             }
             VStack{
                 Text("0.00 Kg")
@@ -49,24 +34,15 @@ struct UserImpactView: View {
                     .font(.system(size: 65))
                 Spacer(minLength: 50)
             }
+            Spacer()
             
             VStack{
-                Text("Amount of savings")
+                Text("Amount of weekly Pollution")
                     .font(.system(size: 20))
                     .multilineTextAlignment(.leading)
                     .bold()
-                    .padding(.trailing, 210.0)
-                HStack{
-                    Text("This is your weekly impact")
-                        .font(.subheadline)
-                        .fontWeight(.regular)
-                        .foregroundColor(Color.gray)
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(nil)
-                        .padding([.leading, .bottom, .trailing], 8.0)
-                    Spacer(minLength: 165)
-                }
-                
+                    .padding(.trailing)
+                Spacer(minLength: 100)
                 VStack{
                     Text("0.00 Kg")
                         .fontWeight(.semibold)
